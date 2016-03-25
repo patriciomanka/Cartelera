@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+        android:background="#00284a"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/tvc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+               android:textColor="#ffffff"
+        android:text="Seleccione Carrera" />
+
+    <Spinner
+        android:id="@+id/spc"
+        android:layout_width="match_parent"
+               android:textColor="#ffffff"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btc"
+        android:layout_width="wrap_content"
+               android:textColor="#ffffff"
+        android:layout_height="wrap_content"
+        android:text="OK" />
+
+</LinearLayout>

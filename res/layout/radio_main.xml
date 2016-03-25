@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00284a"
+    android:orientation="vertical" >
+    <ImageView
+      android:id="@+id/imgRadio"
+      android:src="@drawable/radioundav"
+      android:layout_height="wrap_content"
+      android:layout_width="wrap_content"/>
+    <Button 
+           android:id="@+id/btDetener"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Detener Reproduccion"/>
+    <Button 
+           android:id="@+id/btLlamar"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Llamar"/>
+	
+	<ImageView
+     	   android:id="@+id/imgRadioAntigua"
+     	   android:src="@drawable/radioantigua"
+           android:layout_height="fill_parent"
+           android:layout_width="fill_parent"/>
+</LinearLayout>

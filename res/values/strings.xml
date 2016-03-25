@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Cartelera</string>
+    <string name="action_settings">Settings</string>
+    <string name="aula">Consultar Aula</string>
+    <string name="noticia">Noticias Undav</string>
+    <string name="radio">Radio Undav</string>
+    <string name="sede">Sedes Undav</string>
+    <string name="kandaz">by Kandaz</string>
+
+</resources>
