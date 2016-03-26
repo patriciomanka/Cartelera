@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#00284a"
+    android:background="@color/LightSteelBlue"
     android:orientation="vertical" xmlns:android1="http://schemas.android.com/apk/res/android">
           <android.support.v7.widget.Toolbar
       xmlns:android="http://schemas.android.com/apk/res/android"   
@@ -18,85 +18,85 @@
         android:id="@+id/tvm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="#ffffff"
-        android:text="Seleccione Materia" />
+        android:textColor="@color/White"
+        android:text="@string/seleccione_materia" />
 
     <Spinner
         android:id="@+id/spm"
         android:layout_width="match_parent"
-        android:textColor="#ffffff"
+        android:textColor="@color/White"
         android:layout_height="wrap_content" />
 
     <TextView
         android:id="@+id/tvt"
         android:layout_width="wrap_content"
-        android:textColor="#ffffff"
+        android:textColor="@color/White"
         android:layout_height="wrap_content"
-        android:text="Seleccione Turno" />
+        android:text="@string/seleccione_turno" />
     
     <Spinner
         android:id="@+id/spt"
         android:layout_width="match_parent"
-        android:textColor="#ffffff"
+        android:textColor="@color/White"
         android:layout_height="wrap_content" />
 
     <Button
         android:id="@+id/btm"
         android:layout_width="wrap_content"
-        android:textColor="#ffffff"
+        android:textColor="@color/White"
         android:layout_height="wrap_content"
-        android:text="Buscar" />
+        android:text="@string/consultar_comision" />
 
     <LinearLayout
         android:id="@+id/cabecera"
         android:layout_width="match_parent"
-        android:background= "#006aa5"
+        android:background= "@color/LightGrey"
         android:textSize="20sp"
         android:layout_height="wrap_content">
 
         <TextView
         android:id="@+id/tvCom"
-        android:textColor="#ffffff"
+        android:textColor="@color/White"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
          android:textSize="20sp"
-        android:text="Com."
+        android:text="@string/columna_comision"
         android:layout_weight="1">
     </TextView>
     <TextView
         android:id="@+id/tvDia1"
-        android:textColor="#ffffff"
+        android:textColor="@color/White"
         android:layout_width="0dp"
          android:textSize="20sp"
         android:layout_height="wrap_content"
-        android:text="Día"
+        android:text="@string/columna_dia"
         android:layout_weight="1">
     </TextView>
     <TextView
         android:id="@+id/tvHi1"
-        android:textColor="#ffffff"
+        android:textColor="@color/White"
          android:textSize="20sp"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Desde"
+        android:text="@string/columna_hora_inicio"
         android:layout_weight="1" >
     </TextView>
     <TextView
         android:id="@+id/tvHf1"
-        android:textColor="#ffffff"
+        android:textColor="@color/White"
          android:textSize="20sp"
 		android:layout_width="0dp"
-		android:text="Hasta"
+		android:text="@string/columna_hora_fin"
         android:layout_height="wrap_content" 
         android:layout_weight="1">
     </TextView>
    
      <TextView
         android:id="@+id/tvAula1"
-        android:textColor="#ffffff"
+        android:textColor="@color/White"
         android:layout_width="0dp"
          android:textSize="20sp"
-        android:text="Aula"
+        android:text="@string/columna_aula"
         android:layout_height="wrap_content" 
         android:layout_weight="1">
     </TextView>

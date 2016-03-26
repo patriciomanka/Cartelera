@@ -8,39 +8,24 @@
     
      <TextView
         android:id="@+id/tvCom"
-        android:textColor="#ffffff"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1">
+        style="@style/Adaptador_comision">
     </TextView>
     <TextView
         android:id="@+id/tvDia1"
-        android:textColor="#ffffff"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1">
+        style="@style/Adaptador_comision">
     </TextView>
     <TextView
         android:id="@+id/tvHi1"
-        android:textColor="#ffffff"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1" >
+       style="@style/Adaptador_comision">
     </TextView>
     <TextView
         android:id="@+id/tvHf1"
-        android:textColor="#ffffff"
-		android:layout_width="0dp"
-        android:layout_height="wrap_content" 
-        android:layout_weight="1">
+        style="@style/Adaptador_comision">
     </TextView>
    
      <TextView
         android:id="@+id/tvAula1"
-        android:textColor="#ffffff"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content" 
-        android:layout_weight="1">
+       style="@style/Adaptador_comision">
     </TextView>
     
 

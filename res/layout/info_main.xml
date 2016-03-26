@@ -1,6 +1,6 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:background="#00284a"
+    android:background="@color/LightSteelBlue"
     android:layout_height="match_parent"
     android:orientation="vertical" >
               <android.support.v7.widget.Toolbar
@@ -21,18 +21,20 @@
               android:id="@+id/btWeb"
               android:layout_height="70dp"
               android:layout_width="wrap_content"
-              android:drawableLeft="@drawable/kandaz"/>
+              android:drawableLeft="@drawable/kandaz"
+              android:drawableStart="@drawable/kandaz"/>
           <Button 
               android:id="@+id/btFB"
               android:layout_height="70dp"
               android:layout_width="wrap_content"
-              android:drawableLeft="@drawable/facebook"/>
+              android:drawableLeft="@drawable/facebook"
+              android:drawableStart="@drawable/facebook"/>
       </LinearLayout>
       <TextView
       android:id="@+id/info"
       android:layout_width="match_parent"
-      android:textColor="#ffffff"
+      android:textColor="@color/White"
       android:layout_height="wrap_content"
-      android:text="Cartelera UNDAV v0.9b\n\nCreado por Kandaz:\nDíaz, Sebastián\nLoza, Eric\nManka, Patricio\n\nEstán permitidos su uso y distribución sin ninguna restricción.\nProhibida su descompilación o modificación interna."
+      android:text="@string/about"
       android:textStyle="bold" />
 </LinearLayout>

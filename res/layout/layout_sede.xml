@@ -9,14 +9,14 @@
       android:id="@+id/nombre"
       android:layout_height="wrap_content" 
       android:layout_width="match_parent"
-      android:textColor="#ffffff"
+      android:textColor="@color/White"
       android:textStyle="bold" />
 
   <TextView
       android:id="@+id/direccion"
       android:layout_height="wrap_content"
       android:layout_width="match_parent"
-              android:textColor="#ffffff"
+              android:textColor="@color/White"
       android:textStyle="italic" />
 
    <LinearLayout 
@@ -27,13 +27,13 @@
               android:id="@+id/btLlamar"
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
-              android:text="Llamar"/>
+              android:text="@string/llamar_sede"/>
               
         <Button 
               android:id="@+id/btMapa"
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
-              android:text="Ver en mapa"/>
+              android:text="@string/ver_mapa"/>
    </LinearLayout>    
 
 </LinearLayout>

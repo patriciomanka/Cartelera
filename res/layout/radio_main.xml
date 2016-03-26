@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#00284a"
+    android:background="@color/LightSteelBlue"
     android:orientation="vertical" >
               <android.support.v7.widget.Toolbar
       xmlns:android="http://schemas.android.com/apk/res/android"   
@@ -23,11 +23,11 @@
            android:id="@+id/btDetener"
            android:layout_width="wrap_content"
            android:layout_height="wrap_content"
-           android:text="Detener Reproduccion"/>
+           android:text="@string/detener_radio"/>
     <Button 
            android:id="@+id/btLlamar"
            android:layout_width="wrap_content"
            android:layout_height="wrap_content"
-           android:text="Llamar"/>
+           android:text="@string/llamar_radio"/>
 
 </LinearLayout>
