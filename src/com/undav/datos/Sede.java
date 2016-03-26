@@ -3,14 +3,42 @@ package com.undav.datos;
 public class Sede {
 
 	private String titulo,cuerpo,telefono;
-
+	private double latitud,longitud;
 	
-	public Sede (String tit, String cue, String tel){
-		titulo=tit;
-		cuerpo=cue;
-		telefono=tel;
+	public Sede (String titulo, String cuerpo, String telefono, double latitud, double longitud){
+		this.titulo=titulo;
+		this.cuerpo=cuerpo;
+		this.telefono=telefono;
+		this.latitud=latitud;
+		this.longitud=longitud;
 	}
 	
+	
+	
+	public double getLatitud () {
+		return latitud;
+	}
+
+
+
+	public void setLatitud (double latitud) {
+		this.latitud = latitud;
+	}
+
+
+
+	public double getLongitud () {
+		return longitud;
+	}
+
+
+
+	public void setLongitud (double longitud) {
+		this.longitud = longitud;
+	}
+
+
+
 	public String getTitulo() {
 		return titulo;
 	}

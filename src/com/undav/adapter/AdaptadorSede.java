@@ -2,7 +2,6 @@ package com.undav.adapter;
 
 import com.undav.cartelera.R;
 import com.undav.datos.Sede;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Color;
@@ -23,7 +22,7 @@ public class AdaptadorSede extends ArrayAdapter<Sede>{
 		super(context, R.layout.layout_sede, datos); 
 		this.context = context;
 		 this.datos = datos;
-		 }
+	}
 
 	
 	@Override
@@ -63,26 +62,8 @@ public class AdaptadorSede extends ArrayAdapter<Sede>{
 
         holder.btMapa.setOnClickListener (new OnClickListener () {
 			public void onClick (View v) {
-				float lat=0;
-				float lng=0;
-				String label = datos[position].getTitulo();
-				if(position==0){
-					lat=(float) -34.665217847204694;
-					lng=(float) -58.37436263930203;
-				}else if (position==1){
-					lat=(float) -34.668618910983106;
-					lng=(float) -58.398067200000014;
-				}else if (position==2){
-					lat=(float) -34.6607651109799;
-					lng=(float) -58.35657015000004;
-				}else if (position==3){
-					lat=(float) -34.66698611098245;
-					lng=(float) -58.37000664999999;
-				}
-				String uriBegin = "geo:" + lat + "," + lng; 
-				String query = lat + "," + lng + "(" + label + ")"; 
-				String encodedQuery = Uri.encode(query); 
-				String uriString = uriBegin + "?q=" + encodedQuery + "&z=16"; 
+				String query = datos[position].getLatitud () + "," +  datos[position].getLongitud ()   + "(" + datos[position].getTitulo() + ")"; 
+				String uriString = "geo:" + datos[position].getLatitud () + "," + datos[position].getLongitud () + "?q=" + Uri.encode(query) + "&z=16"; 
 				Uri uri = Uri.parse(uriString); 
 				Intent i = new Intent(android.content.Intent.ACTION_VIEW, uri);
 				i.setClassName("com.google.android.apps.maps", "com.google.android.maps.MapsActivity");

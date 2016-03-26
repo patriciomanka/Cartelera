@@ -6,16 +6,6 @@
     android:background="@color/White"
     tools:context=".SplashScreenActivity" >
 
-    <TextView
-        android:id="@+id/titulo"
-        android:layout_width="wrap_content"
-                android:scaleType="fitXY"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:text="@string/kandaz"
-        
-        android:textColor="@color/White" />
 
     <ImageView
         android:id="@+id/imageView2"

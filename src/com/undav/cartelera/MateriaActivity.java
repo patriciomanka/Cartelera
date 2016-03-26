@@ -37,7 +37,6 @@ public class MateriaActivity extends AppCompatActivity {
 	private ArrayAdapter<String> adaptadorm;
 	private ArrayAdapter<String> adaptadort;
 	private AdaptadorComision adaptadorc;
-	private String[] turnos={"Mañana","Tarde","Noche"};
 	private LinearLayout cabecera;
 	
 	protected void onCreate(Bundle savedInstanceState) {
@@ -49,22 +48,7 @@ public class MateriaActivity extends AppCompatActivity {
     	cabecera=(LinearLayout)findViewById(R.id.cabecera);
 		Bundle bundlem = this.getIntent().getExtras();
         carrera=bundlem.getString("Carrera");
-        adaptadort = new ArrayAdapter<String>(MateriaActivity.this, R.layout.spinner_item,turnos);
-		OnClickListener ListenerConsulta = new OnClickListener(){
-
- 		    @Override
- 		    public void onClick(View arg0) {
- 		    	 //Obtener comisiones
- 		    	getComision cargarComision = new getComision(MateriaActivity.this);
- 		    	try{
- 		    		cargarComision.execute();
- 		    	}catch(Exception e) {
- 		    		Toast.makeText(getApplicationContext(),
- 		                    "No hay Materias en Turno Seleccionado", Toast.LENGTH_LONG).show ();
- 		    	}
- 		    }};  
-
-        //Obtener materias
+        adaptadort = new ArrayAdapter<String>(MateriaActivity.this, R.layout.spinner_item,new String[]{"Mañana","Tarde","Noche"});
         getMateria cargarMateria = new getMateria(MateriaActivity.this);
     	try{
     		cargarMateria.execute();
@@ -78,12 +62,21 @@ public class MateriaActivity extends AppCompatActivity {
         spt.setEnabled(false);
         spt.setAdapter(adaptadort);
         btm = (Button)findViewById(R.id.btm);
-        btm.setOnClickListener(ListenerConsulta);
         tabla = (ListView)findViewById(R.id.lvHorarios);
         spt.setEnabled(false);
         cabecera.setVisibility(View.INVISIBLE);
 
 
+	}
+	
+	public void consultarComision (View v) {
+    	getComision cargarComision = new getComision(MateriaActivity.this);
+    	try{
+    		cargarComision.execute();
+    	}catch(Exception e) {
+    		Toast.makeText(getApplicationContext(),
+                    "No hay Materias en Turno Seleccionado", Toast.LENGTH_LONG).show ();
+    	}
 	}
 	
 	public class getMateria extends AsyncTask<Void, Void, ArrayAdapter<String>> {

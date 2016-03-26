@@ -25,8 +25,6 @@ public class Inicio extends AppCompatActivity {
 		            .show();
                      finish();
 		}else{
-		kandaz = (TextView)findViewById(R.id.titulo);
-		
    		Intent intentc = new Intent(Inicio.this, CarreraActivity.class);
    		startActivity(intentc);
    		finish();

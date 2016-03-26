@@ -49,11 +49,11 @@ public class AdaptadorComision extends ArrayAdapter<Comision> {
 				item.setBackgroundColor(Color.parseColor("#006aa5"));
 			}
        
-	    holder.com.setText(Html.fromHtml(datos[position].getCom()));
-        holder.dia1.setText(Html.fromHtml(datos[position].getDia1()));
-        holder.hi1.setText(Html.fromHtml(datos[position].getHi1()));
-        holder.hf1.setText(Html.fromHtml(datos[position].getHf1()));
-        holder.aula1.setText(Html.fromHtml(datos[position].getAula1()));
+	    holder.com.setText(Html.fromHtml(datos[position].getComision()));
+        holder.dia1.setText(Html.fromHtml(datos[position].getDia()));
+        holder.hi1.setText(Html.fromHtml(datos[position].getHoraInicio()));
+        holder.hf1.setText(Html.fromHtml(datos[position].getHoraFin()));
+        holder.aula1.setText(Html.fromHtml(datos[position].getAula()));
         return(item);
     }
 	

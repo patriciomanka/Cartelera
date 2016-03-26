@@ -14,7 +14,6 @@
     <string name="noticia">Noticias Undav</string>
     <string name="radio">Radio Undav</string>
     <string name="sede">Sedes Undav</string>
-    <string name="kandaz">by Kandaz</string>
     <string name="seleccione_materia">Seleccione Materia</string>
     <string name="seleccione_turno">Seleccione Turno</string>
     <string name="consultar_comision">Consultar comision</string>
@@ -24,7 +23,7 @@
         <string name="columna_hora_inicio">Hr. Inicio</string>
     <string name="columna_hora_fin">Hr. Fin</string>
             <string name="llamar_radio">Llamar</string>
-    <string name="detener_radio">Detener</string>
+    <string name="play_radio">Reproducir/Pausar</string>
                 <string name="llamar_sede">Llamar</string>
     <string name="ver_mapa">Ver en Google Maps</string>
 </resources>

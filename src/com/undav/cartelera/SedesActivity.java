@@ -21,10 +21,10 @@ public class SedesActivity extends AppCompatActivity {
 	
 	private ListView lvs;
 	private AdaptadorSede adaptadors;
-	private Sede[] sede={new Sede("Sede España","España 350 esq. Colón, Avellaneda","(54 11) 4229-2400"),
-			             new Sede("Sede Piñeyro","Mario Bravo 1460 esq. Isleta, Piñeyro","(54 11) 5436-7500"),
-			             new Sede("Sede 12 de Octubre","12 de Octubre 463, Avellaneda","(54 11) 4201-7797"),
-					     new Sede("Sede Constitución","Constitución 627, Avellaneda","(54 11) 4201-2479")};
+	private Sede[] sede={new Sede("Sede España","España 350 esq. Colón, Avellaneda","(54 11) 4229-2400", -34.665217847204694, -58.37436263930203),
+			             new Sede("Sede Piñeyro","Mario Bravo 1460 esq. Isleta, Piñeyro","(54 11) 5436-7500",-34.668618910983106, -58.398067200000014),
+			             new Sede("Sede 12 de Octubre","12 de Octubre 463, Avellaneda","(54 11) 4201-7797",-34.6607651109799, -58.35657015000004),
+					     new Sede("Sede Constitución","Constitución 627, Avellaneda","(54 11) 4201-2479",-34.66698611098245, -58.37000664999999)};
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {

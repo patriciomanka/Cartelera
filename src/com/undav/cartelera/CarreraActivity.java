@@ -36,24 +36,11 @@ public class CarreraActivity extends AppCompatActivity {
 	    Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
 	    setSupportActionBar(myToolbar);
 	    myToolbar.setLogo (drawable.icono);
-		 OnClickListener ListenerCarrera =new OnClickListener(){
-        	 @Override
-  		  public void onClick(View v) {
-  			  carrera = spc.getSelectedItem().toString();
-  			  Bundle b = new Bundle();
-  			  b.putString("Carrera",carrera);
-  			  Intent intentc = new Intent(CarreraActivity.this, MateriaActivity.class);
-  			  intentc.putExtras(b);
-  			  startActivity(intentc);
-  		    }
-  		  };
 		
 	    spc = (Spinner)findViewById(R.id.spc);
-        btc = (Button)findViewById(R.id.btc);
-        btc.setOnClickListener(ListenerCarrera);        
+        btc = (Button)findViewById(R.id.btc);     
        
 
-        //Obtener carreras
         getCarrera cargarCarrera = new getCarrera(CarreraActivity.this);
     	try{
     	cargarCarrera.execute();
@@ -64,11 +51,16 @@ public class CarreraActivity extends AppCompatActivity {
     	} 
 }
     	
-	
+public void buscarMaterias (View v) {
+	  carrera = spc.getSelectedItem().toString();
+	  Bundle b = new Bundle();
+	  b.putString("Carrera",carrera);
+	  Intent intentc = new Intent(CarreraActivity.this, MateriaActivity.class);
+	  intentc.putExtras(b);
+	  startActivity(intentc);
+}
 	
 public class getCarrera extends AsyncTask<Void, Void, ArrayAdapter<String>> {
-	
-	@SuppressWarnings("unused")
 	private Context context;
 	private ProgressDialog pDialog;
 	

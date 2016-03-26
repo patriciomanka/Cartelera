@@ -24,18 +24,6 @@ public class InfoActivity extends AppCompatActivity {
 	    Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
 	    setSupportActionBar(myToolbar);
 	    myToolbar.setLogo (drawable.icono);
-		fb = (Button) findViewById (R.id.btFB);
-		fb.setOnClickListener (new OnClickListener () {
-			public void onClick (View arg0) {
-				startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/kandazteam")));
-         }
-      });
-		web = (Button) findViewById (R.id.btWeb);
-		web.setOnClickListener (new OnClickListener () {
-			public void onClick (View arg0) {
-				startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://kandazteam.wix.com/kandaz")));
-         }
-      });
 	}
 	public void onBackPressed() {
 	    finish();

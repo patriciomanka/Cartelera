@@ -13,23 +13,6 @@
       android:elevation="4dp"
       android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
       app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
-    <LinearLayout
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content"
-       android:orientation="horizontal" >
-             <Button 
-              android:id="@+id/btWeb"
-              android:layout_height="70dp"
-              android:layout_width="wrap_content"
-              android:drawableLeft="@drawable/kandaz"
-              android:drawableStart="@drawable/kandaz"/>
-          <Button 
-              android:id="@+id/btFB"
-              android:layout_height="70dp"
-              android:layout_width="wrap_content"
-              android:drawableLeft="@drawable/facebook"
-              android:drawableStart="@drawable/facebook"/>
-      </LinearLayout>
       <TextView
       android:id="@+id/info"
       android:layout_width="match_parent"
