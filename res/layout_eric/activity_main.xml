@@ -1,0 +1,50 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" 
+    android:background="@drawable/fondo"
+    android:orientation="vertical">
+    
+   <LinearLayout
+       android:layout_width="wrap_content"
+       android:layout_height="match_parent"
+       android:background="@drawable/abc_ab_bottom_transparent_dark_holo"
+       android:orientation="vertical" >
+       
+       <Button 
+           android:id="@+id/btAula"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:drawableLeft="@drawable/abc_ic_search_api_holo_light"
+           android:text="Buscar Aula"/>
+       
+       <Button 
+          android:id="@+id/btNoticia"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:drawableLeft="@android:drawable/ic_menu_info_details"
+          android:text="Noticias" />
+       
+      <Button 
+          android:id="@+id/btRadio"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:drawableLeft="@android:drawable/ic_btn_speak_now"
+          android:text="Radio UNDAV" />
+
+      <Button 
+          android:id="@+id/btSede"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:drawableLeft="@android:drawable/ic_menu_mapmode"
+          android:text="Sedes" />
+
+      <Button
+          android:id="@+id/btInfo"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="Acerca de" />
+
+   </LinearLayout>
+</LinearLayout>
