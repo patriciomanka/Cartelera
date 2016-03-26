@@ -15,33 +15,33 @@
       android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
       app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
     <TextView
-        android:id="@+id/tvm"
+        android:id="@+id/texto_materia"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/White"
         android:text="@string/seleccione_materia" />
 
     <Spinner
-        android:id="@+id/spm"
+        android:id="@+id/spinner_materia"
         android:layout_width="match_parent"
         android:textColor="@color/White"
         android:layout_height="wrap_content" />
 
     <TextView
-        android:id="@+id/tvt"
+        android:id="@+id/texto_turno"
         android:layout_width="wrap_content"
         android:textColor="@color/White"
         android:layout_height="wrap_content"
         android:text="@string/seleccione_turno" />
     
     <Spinner
-        android:id="@+id/spt"
+        android:id="@+id/spinner_turno"
         android:layout_width="match_parent"
         android:textColor="@color/White"
         android:layout_height="wrap_content" />
 
     <Button
-        android:id="@+id/btm"
+        android:id="@+id/boton_consultar"
         android:onClick="consultarComision"
         android:layout_width="wrap_content"
         android:textColor="@color/White"
@@ -56,7 +56,7 @@
         android:layout_height="wrap_content">
 
         <TextView
-        android:id="@+id/tvCom"
+        android:id="@+id/comision"
         android:textColor="@color/White"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -65,7 +65,7 @@
         android:layout_weight="1">
     </TextView>
     <TextView
-        android:id="@+id/tvDia1"
+        android:id="@+id/dia"
         android:textColor="@color/White"
         android:layout_width="0dp"
          android:textSize="20sp"
@@ -74,7 +74,7 @@
         android:layout_weight="1">
     </TextView>
     <TextView
-        android:id="@+id/tvHi1"
+        android:id="@+id/hora1"
         android:textColor="@color/White"
          android:textSize="20sp"
         android:layout_width="0dp"
@@ -83,7 +83,7 @@
         android:layout_weight="1" >
     </TextView>
     <TextView
-        android:id="@+id/tvHf1"
+        android:id="@+id/hora2"
         android:textColor="@color/White"
          android:textSize="20sp"
 		android:layout_width="0dp"
@@ -93,7 +93,7 @@
     </TextView>
    
      <TextView
-        android:id="@+id/tvAula1"
+        android:id="@+id/aula"
         android:textColor="@color/White"
         android:layout_width="0dp"
          android:textSize="20sp"

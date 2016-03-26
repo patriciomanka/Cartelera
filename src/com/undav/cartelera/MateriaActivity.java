@@ -29,14 +29,14 @@ import android.widget.Toast;
 
 
 public class MateriaActivity extends AppCompatActivity {
-	private Spinner spm;
-	private Spinner spt;
-	private Button btm;
+	private Spinner spinner_materia;
+	private Spinner spinner_turno;
+	private Button boton_consultar;
 	private String carrera,materia,turno;
 	private ListView tabla;
-	private ArrayAdapter<String> adaptadorm;
-	private ArrayAdapter<String> adaptadort;
-	private AdaptadorComision adaptadorc;
+	private ArrayAdapter<String> adaptador_materia;
+	private ArrayAdapter<String> adaptador_turno;
+	private AdaptadorComision adaptador_comision;
 	private LinearLayout cabecera;
 	
 	protected void onCreate(Bundle savedInstanceState) {
@@ -48,7 +48,7 @@ public class MateriaActivity extends AppCompatActivity {
     	cabecera=(LinearLayout)findViewById(R.id.cabecera);
 		Bundle bundlem = this.getIntent().getExtras();
         carrera=bundlem.getString("Carrera");
-        adaptadort = new ArrayAdapter<String>(MateriaActivity.this, R.layout.spinner_item,new String[]{"Mañana","Tarde","Noche"});
+        adaptador_turno = new ArrayAdapter<String>(MateriaActivity.this, R.layout.spinner_item,new String[]{"Mañana","Tarde","Noche"});
         getMateria cargarMateria = new getMateria(MateriaActivity.this);
     	try{
     		cargarMateria.execute();
@@ -57,13 +57,13 @@ public class MateriaActivity extends AppCompatActivity {
                     "No hay Materias Cargadas", Toast.LENGTH_LONG).show ();
     	}
 
-    	spm = (Spinner)findViewById(R.id.spm);
-        spt = (Spinner)findViewById(R.id.spt);
-        spt.setEnabled(false);
-        spt.setAdapter(adaptadort);
-        btm = (Button)findViewById(R.id.btm);
+    	spinner_materia = (Spinner)findViewById(R.id.spinner_materia);
+    	spinner_turno = (Spinner)findViewById(R.id.spinner_turno);
+    	spinner_turno.setEnabled(false);
+    	spinner_turno.setAdapter(adaptador_turno);
+        boton_consultar = (Button)findViewById(R.id.boton_consultar);
         tabla = (ListView)findViewById(R.id.lvHorarios);
-        spt.setEnabled(false);
+        spinner_turno.setEnabled(false);
         cabecera.setVisibility(View.INVISIBLE);
 
 
@@ -118,15 +118,15 @@ public class MateriaActivity extends AppCompatActivity {
 				return null;
 			}
 			
-			adaptadorm = new ArrayAdapter<String>(MateriaActivity.this, R.layout.spinner_item,respuesta);
+			adaptador_materia = new ArrayAdapter<String>(MateriaActivity.this, R.layout.spinner_item,respuesta);
 			
-			return adaptadorm;
+			return adaptador_materia;
 	}
 		 
 	protected void onPostExecute(ArrayAdapter<String> result) {
 		    super.onPostExecute(result);
-			spm.setAdapter(adaptadorm);
-			spt.setEnabled(true);
+			spinner_materia.setAdapter(adaptador_materia);
+			spinner_turno.setEnabled(true);
 		    this.pDialog.dismiss();
 		    if(result ==null){
 		    	Toast.makeText(getApplicationContext(),
@@ -163,9 +163,9 @@ public class getComision extends AsyncTask<Void, Void, AdaptadorComision> {
 			
 			try {
 				consultac = new Post ("http://kandaz.co.nf/Undav/obtener_comision.php");
-				consultac.agregar("materia", spm.getSelectedItem().toString());
+				consultac.agregar("materia", spinner_materia.getSelectedItem().toString());
 				consultac.agregar("carrera", carrera);
-				consultac.agregar("turno", spt.getSelectedItem().toString() );
+				consultac.agregar("turno", spinner_turno.getSelectedItem().toString() );
 				consultaj= consultac.getJSONArray ();
 				respuesta = new Comision [consultaj.length ()];
 			   for (int i=0; i<consultaj.length (); i++) 
@@ -180,15 +180,15 @@ public class getComision extends AsyncTask<Void, Void, AdaptadorComision> {
 				return null;
 			}
 			
-			adaptadorc = new AdaptadorComision(MateriaActivity.this, respuesta);
+			adaptador_comision = new AdaptadorComision(MateriaActivity.this, respuesta);
 			
-			return adaptadorc;
+			return adaptador_comision;
 	}
 		 
 	protected void onPostExecute(AdaptadorComision result) {
 		    super.onPostExecute(result);	
 		    this.pDialog.dismiss();
-		    tabla.setAdapter(adaptadorc);
+		    tabla.setAdapter(adaptador_comision);
 		    cabecera.setVisibility(View.VISIBLE);
 		    tabla.setVisibility(View.VISIBLE);
 		    if(result ==null){

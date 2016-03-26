@@ -21,7 +21,7 @@ public class Inicio extends AppCompatActivity {
 		
 		if (!verificaConexion (this)) {
 		    Toast.makeText(getBaseContext(),
-		            "Sin conexión a Internet. Saliendo ... ", Toast.LENGTH_LONG)
+		            "Su dispositivo no posee conexion a internet. Por favor, conectese para poder utilizar la app.", Toast.LENGTH_LONG)
 		            .show();
                      finish();
 		}else{
@@ -33,13 +33,8 @@ public class Inicio extends AppCompatActivity {
 
 	
 	 public boolean verificaConexion(Context ctx) {
-		 	boolean bConectado =false;
-		    ConnectivityManager connec = (ConnectivityManager) ctx.getSystemService(Context.CONNECTIVITY_SERVICE);
-		    NetworkInfo[] redes = connec.getAllNetworkInfo();
-		    for (int i = 0; i < redes.length; i++) {
-		        if (redes[i].getState() == NetworkInfo.State.CONNECTED) 
-		            bConectado= true;
-		    }
-		    return bConectado;
-		}
+		ConnectivityManager cm = (ConnectivityManager)ctx.getSystemService(Context.CONNECTIVITY_SERVICE);
+		NetworkInfo activeNetwork = cm.getActiveNetworkInfo();
+		return  activeNetwork != null && activeNetwork.isConnectedOrConnecting();
+	}
 }

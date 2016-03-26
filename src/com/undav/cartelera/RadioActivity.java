@@ -72,7 +72,7 @@ public class RadioActivity extends AppCompatActivity {
     }
     
     public void llamar (View v) {
-   	 startActivity(new Intent(Intent.ACTION_CALL, Uri.parse("tel:4229-2451")));
+   	 startActivity(new Intent(Intent.ACTION_CALL, Uri.parse("tel:(54 11) 4229-2451")));
     }
     
 	@Override

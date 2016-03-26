@@ -7,24 +7,24 @@
 
     
      <TextView
-        android:id="@+id/tvCom"
+        android:id="@+id/tvComision"
         style="@style/Adaptador_comision">
     </TextView>
     <TextView
-        android:id="@+id/tvDia1"
+        android:id="@+id/tvDia"
         style="@style/Adaptador_comision">
     </TextView>
     <TextView
-        android:id="@+id/tvHi1"
+        android:id="@+id/tvHora1"
        style="@style/Adaptador_comision">
     </TextView>
     <TextView
-        android:id="@+id/tvHf1"
+        android:id="@+id/tvHora2"
         style="@style/Adaptador_comision">
     </TextView>
    
      <TextView
-        android:id="@+id/tvAula1"
+        android:id="@+id/tvAula"
        style="@style/Adaptador_comision">
     </TextView>
     

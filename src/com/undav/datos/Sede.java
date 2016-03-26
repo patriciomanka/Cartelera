@@ -2,12 +2,12 @@ package com.undav.datos;
 
 public class Sede {
 
-	private String titulo,cuerpo,telefono;
+	private String titulo,direccion,telefono;
 	private double latitud,longitud;
 	
-	public Sede (String titulo, String cuerpo, String telefono, double latitud, double longitud){
+	public Sede (String titulo, String direccion, String telefono, double latitud, double longitud){
 		this.titulo=titulo;
-		this.cuerpo=cuerpo;
+		this.direccion=direccion;
 		this.telefono=telefono;
 		this.latitud=latitud;
 		this.longitud=longitud;
@@ -47,12 +47,12 @@ public class Sede {
 		this.titulo = titulo;
 	}
 
-	public String getCuerpo() {
-		return cuerpo;
+	public String getDireccion() {
+		return direccion;
 	}
 
-	public void setCuerpo(String cuerpo) {
-		this.cuerpo = cuerpo;
+	public void setDireccion(String direccion) {
+		this.direccion = direccion;
 	}
 	
 	public String getTelefono() {

@@ -2,9 +2,10 @@ package com.undav.adapter;
 
 
 import com.undav.cartelera.R;
+import com.undav.datos.Comision;
 import com.undav.datos.Materia;
-
 import android.app.Activity;
+import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -27,19 +28,25 @@ public class AdaptadorMateria extends ArrayAdapter<Materia> {
 		if(item==null){
 			LayoutInflater inflater = context.getLayoutInflater();
 			item = inflater.inflate(R.layout.adaptador_materia, null);
-			holder = new RecordHolder();
-			
-			holder.materia = (TextView)item.findViewById(R.id.tvMateria);
+			holder = new RecordHolder(item);
 			item.setTag(holder);
 		}else {
 			   holder = (RecordHolder) item.getTag();
 		}
         
-        holder.materia.setText(datos[position].getMateria());
+        holder.set(datos[position]);
         return(item);
     }
 	
-	static class RecordHolder {
-		  TextView materia;
-		 }
+	private class RecordHolder {
+		  private TextView materia;
+		  
+		  public RecordHolder (View item) {
+			  materia = (TextView)item.findViewById(R.id.tvMateria);
+		  }
+
+		public void set (Materia m) {
+			materia.setText (Html.fromHtml(m.getMateria ()));
+		}
+	}
 }

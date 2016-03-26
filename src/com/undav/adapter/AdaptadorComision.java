@@ -16,6 +16,7 @@ import android.widget.TextView;
 public class AdaptadorComision extends ArrayAdapter<Comision> {
 	private Activity context;
 	private Comision[] datos;
+	private int[] colors = {R.color.Aqua, R.color.Gray};
 	
 	public AdaptadorComision(Activity context, Comision[] datos) {
         super(context, R.layout.adaptador_comision, datos);
@@ -25,43 +26,42 @@ public class AdaptadorComision extends ArrayAdapter<Comision> {
 	public View getView(int position, View convertView, ViewGroup parent) {
         View item = convertView;
         RecordHolder holder=null;
+        int colorPos = position % 2;
         
 		if(item==null){
 			LayoutInflater inflater = context.getLayoutInflater();
 			item = inflater.inflate(R.layout.adaptador_comision, null);
-			holder = new RecordHolder();
-
-			holder.com = (TextView)item.findViewById(R.id.tvCom);
-			holder.dia1 = (TextView)item.findViewById(R.id.tvDia1);
-			holder.hi1 = (TextView)item.findViewById(R.id.tvHi1);
-			holder.hf1 = (TextView)item.findViewById(R.id.tvHf1);
-			holder.aula1 = (TextView)item.findViewById(R.id.tvAula1);
-			
+			holder = new RecordHolder(item);
 			item.setTag(holder);
 			
 		}else {
 			   holder = (RecordHolder) item.getTag();
 		}
 		
-	    if(position%2==0){
-			item.setBackgroundColor(Color.parseColor("#00284a"));		
-			}else{
-				item.setBackgroundColor(Color.parseColor("#006aa5"));
-			}
+	   item.setBackgroundColor(colors[colorPos]);
        
-	    holder.com.setText(Html.fromHtml(datos[position].getComision()));
-        holder.dia1.setText(Html.fromHtml(datos[position].getDia()));
-        holder.hi1.setText(Html.fromHtml(datos[position].getHoraInicio()));
-        holder.hf1.setText(Html.fromHtml(datos[position].getHoraFin()));
-        holder.aula1.setText(Html.fromHtml(datos[position].getAula()));
+	    holder.set(datos[position]);
+        
         return(item);
     }
 	
-	static class RecordHolder {
-		  TextView com;
-		  TextView dia1;
-		  TextView hi1;
-		  TextView hf1;
-		  TextView aula1;
-		 }
+	private class RecordHolder {
+		  private TextView comision, dia, hora1, hora2, aula;
+		  
+		  public RecordHolder (View item) {
+			  comision = (TextView)item.findViewById(R.id.tvComision);
+				dia = (TextView)item.findViewById(R.id.tvDia);
+				hora1 = (TextView)item.findViewById(R.id.tvHora1);
+				hora2 = (TextView)item.findViewById(R.id.tvHora2);
+				aula = (TextView)item.findViewById(R.id.tvAula);
+		  }
+
+		public void set (Comision c) {
+			comision.setText (Html.fromHtml(c.getComision ()));
+			dia.setText (Html.fromHtml(c.getDia ()));
+			hora1.setText (Html.fromHtml(c.getHoraInicio ()));
+			hora2.setText (Html.fromHtml(c.getHoraFin ()));
+			aula.setText (Html.fromHtml(c.getAula ()));
+		}
+	}
 }
