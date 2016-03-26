@@ -37,7 +37,7 @@ public class Post {
 	*/
 
 
-	public void ejecutar () {
+	private void ejecutar () {
 		HttpURLConnection conexion;
 	   String linea;
 	   StringBuilder mensaje=null;

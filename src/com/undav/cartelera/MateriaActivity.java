@@ -5,7 +5,6 @@ import com.undav.adapter.AdaptadorComision;
 import com.undav.datos.Comision;
 import com.undav.peticiones.Post;
 
-import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.os.AsyncTask;
@@ -22,11 +21,10 @@ import android.widget.Toast;
 
 
 
-public class MateriaActivity extends Activity {
+public class MateriaActivity extends ActionBarActivity {
 	private Spinner spm;
 	private Spinner spt;
 	private Button btm;
-	@SuppressWarnings("unused")
 	private String carrera,materia,turno;
 	private ListView tabla;
 	private ArrayAdapter<String> adaptadorm;
@@ -80,7 +78,6 @@ public class MateriaActivity extends Activity {
 	
 	public class getMateria extends AsyncTask<Void, Void, ArrayAdapter<String>> {
 		
-		@SuppressWarnings("unused")
 		private Context context;
 		private ProgressDialog pDialog;
 		
@@ -138,7 +135,6 @@ public class MateriaActivity extends Activity {
 
 public class getComision extends AsyncTask<Void, Void, AdaptadorComision> {
 		
-		@SuppressWarnings("unused")
 		private Context context;
 		private ProgressDialog pDialog;
 		

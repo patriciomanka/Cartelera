@@ -4,8 +4,6 @@ package com.undav.cartelera;
 
 import com.undav.radio.DownloadM3U;
 import com.undav.radio.ListPlayer;
-
-import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -19,7 +17,7 @@ import android.widget.Button;
 
 
 
-public class RadioActivity extends Activity {
+public class RadioActivity extends ActionBarActivity {
 	public ListPlayer listPlayer;
 	private Button detener,llamar;
 

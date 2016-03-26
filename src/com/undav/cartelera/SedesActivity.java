@@ -4,16 +4,13 @@ package com.undav.cartelera;
 
 import com.undav.datos.Sede;
 import com.undav.adapter.AdaptadorSede;
-
-import android.app.Activity;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 
 import android.widget.ListView;
 
 
-@SuppressWarnings("deprecation")
-public class SedesActivity extends Activity{
+public class SedesActivity extends ActionBarActivity {
 	
 	private ListView lvs;
 	private AdaptadorSede adaptadors;

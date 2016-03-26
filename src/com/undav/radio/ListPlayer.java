@@ -11,7 +11,6 @@ import java.net.URL;
 
 
 import com.undav.cartelera.RadioActivity;
-import android.annotation.SuppressLint;
 import android.content.Context;
 
 import android.media.AudioManager;
@@ -61,15 +60,12 @@ public class ListPlayer implements Runnable {
         }
 	}
 	
-	@SuppressLint("WorldReadableFiles")
 	private void downloadToLocalFile(String uriStr) throws Exception {
 		URL url = new URL(Uri.encode(uriStr, ":/"));
 		BufferedInputStream reader = 
 				new BufferedInputStream(url.openStream());
 		
-    	@SuppressWarnings("unused")
-		File f = new File("audiofile.ogg");
-		@SuppressWarnings("deprecation")
+    	File f = new File("audiofile.ogg");
 		FileOutputStream fOut = activity.openFileOutput("audiofile.ogg",
                 Context.MODE_WORLD_READABLE);
 		BufferedOutputStream writer = new BufferedOutputStream(fOut); 

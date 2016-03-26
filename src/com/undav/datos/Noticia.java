@@ -2,29 +2,58 @@ package com.undav.datos;
 
 public class Noticia {
 
-	private String fecha;
-	private String noticia;
+	private String titulo;
+	private String cuerpo;
+	private String link;
+	private String foto;
+
 	
-	public Noticia(String f, String n){
-		noticia =n;
-		fecha =f;
-	}
-
-	public String getNoticia() {
-		return noticia;
-	}
-
-	public void setNoticia(String noticia) {
-		this.noticia = noticia;
-	}
-
-	public String getFecha() {
-		return fecha;
-	}
-
-	public void setFecha(String fecha) {
-		this.fecha = fecha;
+	public Noticia (String foto,String tit, String cue, String l){
+		
+		titulo=tit;
+		cuerpo=cue;
+		link=l;
+		this.foto=foto;
 	}
 	
+	public Noticia (String tit, String cue, String l){
+		
+		titulo=tit;
+		cuerpo=cue;
+		link=l;
+	
+	}
+
+	public String getTitulo() {
+		return titulo;
+	}
+
+	public void setTitulo(String titulo) {
+		this.titulo = titulo;
+	}
+
+	public String getCuerpo() {
+		return cuerpo;
+	}
+
+	public void setCuerpo(String cuerpo) {
+		this.cuerpo = cuerpo;
+	}
+
+	public String getLink() {
+		return link;
+	}
+
+	public void setLink(String link) {
+		this.link = link;
+	}
+
+	public String getFoto() {
+		return foto;
+	}
+
+	public void setFoto(String foto) {
+		this.foto = foto;
+	}
 	
 }
