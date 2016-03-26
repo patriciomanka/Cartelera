@@ -6,14 +6,12 @@ import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class Inicio extends Activity {
-
-	@SuppressWarnings("unused")
+public class Inicio extends AppCompatActivity {
 	private TextView kandaz;
-	@SuppressWarnings("unused")
 	private static final long SPLASH_SCREEN_DELAY = 2000;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +27,7 @@ public class Inicio extends Activity {
 		}else{
 		kandaz = (TextView)findViewById(R.id.titulo);
 		
-   		Intent intentc = new Intent(Inicio.this, MainActivity.class);
+   		Intent intentc = new Intent(Inicio.this, CarreraActivity.class);
    		startActivity(intentc);
    		finish();
 		}

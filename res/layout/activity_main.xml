@@ -1,3 +1,5 @@
+
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -5,19 +7,27 @@
     android:background="@drawable/fondo"
     android:orientation="vertical"
     tools:context=".MainActivity" >
-
+          <android.support.v7.widget.Toolbar
+      xmlns:android="http://schemas.android.com/apk/res/android"   
+      xmlns:app="http://schemas.android.com/apk/res-auto" 
+      android:id="@+id/my_toolbar"
+      android:layout_width="match_parent"
+      android:layout_height="?attr/actionBarSize"
+      android:background="?attr/colorPrimary"
+      android:elevation="4dp"
+      android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+      app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+          
    <LinearLayout
        android:layout_width="wrap_content"
        android:layout_height="wrap_content"
        android:layout_centerVertical="true"
        android:layout_marginLeft="20dp"
        android:orientation="vertical" >
-
        <Button
            android:id="@+id/btAula"
            android:layout_width="match_parent"
            android:layout_height="wrap_content"
-           android:drawableLeft="@drawable/abc_ic_search_api_holo_light"
            android:text="Buscar Aula" />
 
        <Button

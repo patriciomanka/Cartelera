@@ -2,14 +2,21 @@ package com.undav.cartelera;
 
 import org.json.JSONArray;
 import com.undav.adapter.AdaptadorComision;
+import com.undav.cartelera.R.drawable;
 import com.undav.datos.Comision;
 import com.undav.peticiones.Post;
-
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ArrayAdapter;
@@ -21,7 +28,7 @@ import android.widget.Toast;
 
 
 
-public class MateriaActivity extends ActionBarActivity {
+public class MateriaActivity extends AppCompatActivity {
 	private Spinner spm;
 	private Spinner spt;
 	private Button btm;
@@ -36,6 +43,9 @@ public class MateriaActivity extends ActionBarActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.materia_main);
+	    Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
+	    setSupportActionBar(myToolbar);
+	    myToolbar.setLogo (drawable.icono);
     	cabecera=(LinearLayout)findViewById(R.id.cabecera);
 		Bundle bundlem = this.getIntent().getExtras();
         carrera=bundlem.getString("Carrera");
@@ -198,4 +208,44 @@ public class getComision extends AsyncTask<Void, Void, AdaptadorComision> {
 		    
 		}
 	}
+
+@Override
+public boolean onCreateOptionsMenu(Menu menu) {
+    MenuInflater inflater = getMenuInflater();
+    inflater.inflate(R.menu.main, menu);
+    return true;
+}
+
+@Override
+public boolean onOptionsItemSelected(MenuItem item) {
+	Intent intent = null;
+    switch (item.getItemId()) {
+        case R.id.action_about:
+				intent = new Intent(MateriaActivity.this, InfoActivity.class);
+				startActivity(intent);
+				return true;
+        case R.id.action_buscar:
+      	  intent = new Intent(MateriaActivity.this, CarreraActivity.class);
+	        startActivity(intent);
+            return true;
+            
+        case R.id.action_noticias:
+	    	   intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.undav.edu.ar/index.php?idcateg=30"));
+		      startActivity(intent);
+            return true;
+
+        case R.id.action_radio:
+				intent = new Intent(MateriaActivity.this, RadioActivity.class);
+				startActivity(intent);
+            return true;
+        case R.id.action_sedes:
+      	  intent = new Intent(MateriaActivity.this, SedesActivity.class);				        
+	          startActivity(intent);
+            return true;
+        default:
+            return super.onOptionsItemSelected(item);
+
+    }
+    
+}
 }

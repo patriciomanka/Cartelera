@@ -2,7 +2,11 @@
 <resources>
 
     <string name="app_name">Cartelera</string>
-    <string name="action_settings">Settings</string>
+    <string name="action_buscar">Buscar Aula</string>
+      <string name="action_noticias">Noticias</string>
+      <string name="action_radio">Radio</string>
+      <string name="action_sedes">Sedes</string>
+     <string name="action_about">Acerca de</string>
     <string name="aula">Consultar Aula</string>
     <string name="noticia">Noticias Undav</string>
     <string name="radio">Radio Undav</string>

@@ -4,9 +4,25 @@
     tools:context="com.undav.cartelera.MainActivity" >
 
     <item
-        android:id="@+id/action_settings"
-        android:orderInCategory="100"
-        android:title="@string/action_settings"
-        app:showAsAction="never"/>
+        android:id="@+id/action_buscar"
+        android:title="@string/action_buscar"
+        app:showAsAction="ifRoom"/>
+
+    <item android:id="@+id/action_noticias"
+          android:title="@string/action_noticias"
+          app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/action_radio"
+        android:title="@string/action_radio"
+        app:showAsAction="ifRoom"/>
+    
+        <item
+        android:id="@+id/action_sedes"
+        android:title="@string/action_sedes"
+        app:showAsAction="ifRoom"/>
+
+    <item android:id="@+id/action_about"
+          android:title="@string/action_about"
+          app:showAsAction="ifRoom"/>
 
 </menu>

@@ -8,9 +8,10 @@ import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Window;
  
-public class SplashScreenActivity extends Activity {
+public class SplashScreenActivity extends AppCompatActivity {
  
     // Set the duration of the splash screen
     private static final long SPLASH_SCREEN_DELAY = 2000;

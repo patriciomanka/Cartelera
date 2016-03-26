@@ -3,6 +3,16 @@
     android:background="#00284a"
     android:layout_height="match_parent"
     android:orientation="vertical" >
+              <android.support.v7.widget.Toolbar
+      xmlns:android="http://schemas.android.com/apk/res/android"   
+      xmlns:app="http://schemas.android.com/apk/res-auto" 
+      android:id="@+id/my_toolbar"
+      android:layout_width="match_parent"
+      android:layout_height="?attr/actionBarSize"
+      android:background="?attr/colorPrimary"
+      android:elevation="4dp"
+      android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+      app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
     <LinearLayout
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
@@ -11,13 +21,11 @@
               android:id="@+id/btWeb"
               android:layout_height="70dp"
               android:layout_width="wrap_content"
-              android:background="@drawable/abc_ab_bottom_transparent_dark_holo"
               android:drawableLeft="@drawable/kandaz"/>
           <Button 
               android:id="@+id/btFB"
               android:layout_height="70dp"
               android:layout_width="wrap_content"
-              android:background="@drawable/abc_ab_bottom_transparent_dark_holo"
               android:drawableLeft="@drawable/facebook"/>
       </LinearLayout>
       <TextView
