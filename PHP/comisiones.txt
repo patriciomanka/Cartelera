@@ -1,0 +1,34 @@
+Enfermería	Salud I	mañana	1	8	10	lunes	113
+Enfermería	Vacunas II	noche	1	18	22	martes	207
+Ingeniería en Informática	Fisica I	tarde	1	9	12	miercoles	201
+Ingeniería en Informática	Redes de Computadoras	mañana	2	8	12	jueves	203
+Ingeniería en Informática	Analisis Matematico II	tarde	3	15	18	viernes	202
+Ingeniería en Informática	Gestion de Datos	mañana	2	8	12	sabado	204
+Ingeniería en Informática	Programacion Orientada a Objetos	tarde	2	16	18	lunes	203
+Ingeniería en Informática	Arquitectura de Sistemas de Elaboración de Datos II	mañana	1	8	12	martes	201
+Ingeniería en Informática	Inglés I	tarde	2	14	16	miercoles	106
+Ingeniería en Informática	Probabilidad y Estadistica	mañana	2	8	12	jueves	207
+Ingeniería en Informática	Ingenieria de Software	tarde	2	13	16	viernes	206
+Ingeniería en Informática	Metodos Matematicos de la Ingenieria	mañana	3	8	10	sabado	205
+Ingeniería en Informática	Algoritmos y Estructura de Datos	tarde	2	16	18	martes	203
+Gestión de Empresas Fúnebres	Ataúdes II	noche	5	21	23	miercoles	666
+Gestión de Empresas Fúnebres	Entierros IV	noche	4	21	23	viernes	666
+Gestión de Empresas Fúnebres	Rituales y Cultos I	noche	6	21	23	jueves	666
+Enfermería	Vacunas II	mañana	2	8	12	martes	112
+Enfermería	Enfermería Médica I	mañana	3	8	12	martes	115
+Lic. Periodismo	Historia Latinoamericana y Argentina	mañana	1	8	10	lunes	113
+Lic. Periodismo	Sociología	noche	1	18	22	martes	207
+Lic. Periodismo	Publicidad	tarde	1	9	12	miercoles	201
+Ingeniería en Materiales	Química	mañana	2	8	12	jueves	203
+Ingeniería en Materiales	Analisis Matematico I	tarde	3	15	18	viernes	202
+Ingeniería en Materiales	Conformado de Materiales 	mañana	2	8	12	sabado	204
+Ingeniería en Materiales	Electroquímica	tarde	2	16	18	lunes	203
+Arquitectura	Física Aplicada a la Arquitectura	mañana	1	8	12	martes	201
+Arquitectura	Construcciones I	tarde	2	14	16	miercoles	106
+Arquitectura	Estructuras II	mañana	2	8	12	jueves	207
+Arquitectura	Historia III	tarde	2	13	16	viernes	206
+Arquitectura	Arquitectura III	mañana	3	8	10	sabado	205
+Abogacía	Derecho Penal	tarde	2	16	18	martes	203
+Abogacía	Derecho Informático	noche	5	21	23	miercoles	204
+Abogacía	Derecho Tributario	noche	4	21	23	viernes	115
+Enfermería	Enfermería en Salud Pública III	noche	6	21	23	jueves	203
