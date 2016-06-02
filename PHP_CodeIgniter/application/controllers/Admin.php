@@ -58,10 +58,10 @@ class Admin extends CI_Controller {
 						bsaaaaaaaceeeeiiiidnoooooouuuyybyR ';
 		$cadena = utf8_decode($cadena);
 		$cadena = strtr($cadena, utf8_decode($originales), $modificadas);
-		$cadena = strtolower($cadena);
+		//$cadena = strtolower($cadena);
 		$cadena = ltrim($cadena, ' ');
 		$cadena = rtrim($cadena, ' ');
-		$cadena = str_replace(' ', '_', $cadena);
+		//$cadena = str_replace(' ', '_', $cadena);
 		return utf8_encode($cadena);
 	}
 	

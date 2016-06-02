@@ -1,0 +1,26 @@
+API
+
+Carga del archivo de comisiones
+.../index.php/admin/cargarComision   
+
+Carga de nuevos usuarios
+.../index.php/admin/cargarUsuario 
+
+
+.../index.php/carrera
+Parametros :  
+Verbo HTTP : GET
+Respuesta : todas las carreras
+Error : devuelve codigo 404 Not Found
+
+.../index.php/carrera/materia
+Parametros :  carrera (string)
+Verbo HTTP : POST
+Respuesta : las materias de esa carrera
+Error : devuelve codigo 404 Not Found
+
+.../index.php/carrera/comision
+Parametros :  carrera (string), materia (string) y turno (mañana/tarde/noche)
+Verbo HTTP : POST
+Respuesta : las comisiones correspondientes
+Error : devuelve codigo 404 Not Found
