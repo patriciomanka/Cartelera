@@ -13,7 +13,6 @@ class Carrera extends CI_Controller {
 			$data['carreras'] = $this->carrera_model->get_carreras ();
 			if (empty ($data['carreras']))
 				show_404 ();
-			$this->load->view ('templates/headerJSON', $data);
 			$this->load->view ('carrera/index', $data);
 	}
 	public function getMaterias() // $carrera
@@ -22,7 +21,6 @@ class Carrera extends CI_Controller {
 			$data['materias'] = $this->carrera_model->get_materias ($carrera);
 			if (empty ($data['materias']))
 				show_404 ();
-			$this->load->view ('templates/headerJSON', $data);
 			$this->load->view ('carrera/materias', $data);
 	}
 	public function getComision() //$carrera, $materia, $turno
@@ -33,7 +31,6 @@ class Carrera extends CI_Controller {
 			$data['comisiones'] = $this->carrera_model->get_comision ($carrera, $materia, $turno);
 			if (empty ($data['comisiones']))
 				show_404 ();
-			$this->load->view ('templates/headerJSON', $data);
 			$this->load->view ('carrera/comisiones', $data);
 	}
 }
