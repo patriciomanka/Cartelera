@@ -42,7 +42,7 @@ public class MateriaActivity extends AppCompatActivity {
 	private ArrayAdapter<String> adaptador_materia;
 	private ArrayAdapter<String> adaptador_turno;
 	private AdaptadorComision adaptador_comision;
-	private String baseUrl = "192.168.0.100/cartelera2";
+	private String baseUrl = "kandaz.co.nf/Cartelera";
 	
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);

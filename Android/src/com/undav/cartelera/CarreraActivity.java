@@ -31,7 +31,7 @@ public class CarreraActivity extends AppCompatActivity {
 	private Button btc;
 	private String carrera;
 	private ArrayAdapter<String> adaptador;
-	private String baseUrl = "192.168.0.100/cartelera2";
+	private String baseUrl = "kandaz.co.nf/Cartelera";
 	
 	
 	protected void onCreate(Bundle savedInstanceState) {
