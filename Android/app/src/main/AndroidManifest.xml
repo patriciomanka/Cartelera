@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.undav.cartelera">
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true"/>
+    <permission
+        android:name="com.undav.cartelera.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/icono"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        <activity
+            android:name=".cartelera.CarreraActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".cartelera.InfoActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".cartelera.RadioActivity"
+            android:label="@string/radio">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="audio/x-mpegurl" android:scheme="http"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".cartelera.SplashScreenActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".cartelera.Inicio"
+            android:label="@string/app_name" >
+        </activity>
+        <activity android:name=".cartelera.MateriaActivity"
+            android:label="@string/aula" >
+        </activity>
+
+        <activity
+            android:name=".cartelera.SedesActivity"
+            android:label="@string/sede" >
+        </activity>
+    </application>
+
+</manifest>

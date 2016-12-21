@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/LightSteelBlue"
+    android:orientation="vertical" xmlns:android1="http://schemas.android.com/apk/res/android">
+          <android.support.v7.widget.Toolbar
+      xmlns:android="http://schemas.android.com/apk/res/android"   
+      xmlns:app="http://schemas.android.com/apk/res-auto" 
+      android:id="@+id/my_toolbar"
+      android:layout_width="match_parent"
+      android:layout_height="?attr/actionBarSize"
+      android:background="?attr/colorPrimary"
+      android:elevation="4dp"
+      android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+      app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+    <TextView
+        android:id="@+id/texto_materia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/White"
+        android:text="@string/seleccione_materia" />
+
+    <Spinner
+        android:id="@+id/spinner_materia"
+        android:layout_width="match_parent"
+        android:textColor="@color/White"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/texto_turno"
+        android:layout_width="wrap_content"
+        android:textColor="@color/White"
+        android:layout_height="wrap_content"
+        android:text="@string/seleccione_turno" />
+    
+    <Spinner
+        android:id="@+id/spinner_turno"
+        android:layout_width="match_parent"
+        android:textColor="@color/White"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/boton_consultar"
+        android:onClick="consultarComision"
+        android:layout_width="wrap_content"
+        android:textColor="@color/White"
+        android:layout_height="wrap_content"
+        android:text="@string/consultar_comision" />
+
+    <LinearLayout
+        android:id="@+id/cabecera"
+        android:layout_width="match_parent"
+        android:background= "@color/LightGrey"
+        android:textSize="20sp"
+        android:layout_height="wrap_content">
+
+        <TextView
+        android:id="@+id/comision"
+        android:textColor="@color/White"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+         android:textSize="20sp"
+        android:text="@string/columna_comision"
+        android:layout_weight="1">
+    </TextView>
+    <TextView
+        android:id="@+id/dia"
+        android:textColor="@color/White"
+        android:layout_width="0dp"
+         android:textSize="20sp"
+        android:layout_height="wrap_content"
+        android:text="@string/columna_dia"
+        android:layout_weight="1">
+    </TextView>
+    <TextView
+        android:id="@+id/hora1"
+        android:textColor="@color/White"
+         android:textSize="20sp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/columna_hora_inicio"
+        android:layout_weight="1" >
+    </TextView>
+    <TextView
+        android:id="@+id/hora2"
+        android:textColor="@color/White"
+         android:textSize="20sp"
+		android:layout_width="0dp"
+		android:text="@string/columna_hora_fin"
+        android:layout_height="wrap_content" 
+        android:layout_weight="1">
+    </TextView>
+   
+     <TextView
+        android:id="@+id/aula"
+        android:textColor="@color/White"
+        android:layout_width="0dp"
+         android:textSize="20sp"
+        android:text="@string/columna_aula"
+        android:layout_height="wrap_content" 
+        android:layout_weight="1">
+    </TextView>
+    
+    <TextView
+        android1:layout_width="wrap_content"
+        android1:layout_height="wrap_content" >
+
+    </TextView>
+</LinearLayout>
+    <ListView
+        android:id="@+id/lvHorarios"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </ListView>
+
+</LinearLayout>
